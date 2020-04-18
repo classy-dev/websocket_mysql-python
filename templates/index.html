@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest 10 liquidation data from Sql database</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<!-- {{user}}-->
+<div class="container">
+  <h2 style="padding-top:50px">Latest 10 liquidation data from Sql database</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Action</th>
+        <th>OrderID</th>
+        <th>Symbol</th>
+        <th>Side</th>
+        <th>Price</th>
+        <th>LeaveQty</th>
+        <th>Timestamps</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for row in results %}
+      <tr>
+            <td>{{ row[0]}}</td>
+            <td>{{ row[1]}}</td>
+            <td>{{ row[2]}}</td>
+            <td>{{ row[3]}}</td>
+            <td>{{ row[4]}}</td>
+            <td>{{ row[5]}}</td>
+            <td>{{ row[6]}}</td>
+            <td>{{ row[7]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+</body>
+</html>
